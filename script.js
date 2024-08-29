@@ -1,7 +1,7 @@
-// Funkcja do pobierania listy walut
+
 async function getCurrencyList() {
   try {
-    // Wykonanie zapytania do API
+   
     const response = await fetch("https://api.frankfurter.app/latest");
     if (!response.ok) {
       throw new Error("Błąd w pobieraniu danych");
