@@ -22,7 +22,7 @@ async function getCurrencyList() {
 
     document.body.appendChild(select);
   } catch (error) {
-    console.error("Wystąpił błąd:", error);
+    console.log("Wystąpił błąd:", error);
   }
 }
 
