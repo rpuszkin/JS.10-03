@@ -5,13 +5,11 @@ document
 function getCurrencyList() {
   const apiUrl = "https://api.frankfurter.app/latest";
 
-  // Usuwamy poprzedniego selecta, jeśli istnieje
   const existingSelect = document.getElementById("currencySelect");
   if (existingSelect) {
     existingSelect.remove();
   }
 
-  // Usuwamy poprzednią wiadomość o błędzie, jeśli istnieje
   const errorMessage = document.getElementById("errorMessage");
   if (errorMessage) {
     errorMessage.remove();
@@ -20,7 +18,6 @@ function getCurrencyList() {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      // Optional chaining z walidacją
       const rates = data?.rates;
       if (!rates) {
         throw new Error("Nie udało się pobrać danych o walutach.");
