@@ -20,7 +20,7 @@ function getCurrencyList() {
     .then((data) => {
       const rates = data?.rates;
       if (!rates) {
-        throw new Error("Nie udało się pobrać danych o walutach.");
+        throw new alert("Błąd! Nie udało się pobrać danych o walutach.");
       }
       const select = document.createElement("select");
       select.id = "currencySelect";
